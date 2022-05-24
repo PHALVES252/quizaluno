@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Quiz - Comportamentos no Dreamweaver</title>
+<link href="css/estiloquiz.css" rel="stylesheet" type="text/css" />
+<script src="jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-effects.custom.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+function MM_changeProp(objId,x,theProp,theValue) { //v9.0
+  var obj = null; with (document){ if (getElementById)
+  obj = getElementById(objId); }
+  if (obj){
+    if (theValue == true || theValue == false)
+      eval("obj.style."+theProp+"="+theValue);
+    else eval("obj.style."+theProp+"='"+theValue+"'");
+  }
+}
+
+function MM_DW_effectShake(obj,method,effect,direction,distance,times,speed)
+{
+    obj[method](effect, {direction:direction,distance:distance,times:times}, speed);
+}
+function MM_DW_effectFade(obj,method,effect,speed)
+{
+    obj[method](effect, {}, speed);
+}
+function MM_setTextOfLayer(objId,x,newText) { //v9.0
+  with (document) if (getElementById && ((obj=getElementById(objId))!=null))
+    with (obj) innerHTML = unescape(newText);
+}
+</script>
+</head>
+
+<body onload="MM_preloadImages('imagens/quer_mais_over.jpg')">
+	
+	<h1 onclick="MM_openBrWindow('como_funciona.html','','resizable=yes,width=860,height=420')"><img src="imagens/quiz.jpg" width="818" height="97" alt=""/></h1>
+	
+	<p> <a href="como_funciona.html">Como funciona o teste?</a></p>
+	<p>
+		<img src="imagens/form.jpg" alt="" width="195" height="51" class="pos-img" onclick="MM_openBrWindow('formulario.html','FORMULÁRIO','scrollbars=yes,resizable=yes,width=900,height=500')"/>
+    	<img src="imagens/quer_mais.jpg" alt="" width="195" height="51" class="pos-img" id="mais" onclick="MM_goToURL('parent','https://www.es.senac.br/');return document.MM_returnValue" onmouseover="MM_swapImage('mais','','imagens/quer_mais_over.jpg',1)" onmouseout="MM_swapImgRestore()"/>
+    	<img src="imagens/dica.jpg" alt="" width="195" height="51" class="pos-img" onclick="MM_popupMsg('Dica:\Para recomeçar o QUIZ, pressione a tecla f5')"/> 
+	</p>
+<hr />
+<h2>1. É preciso ter uma imagem nomeada para aplicar o comportamento "Trocar imagem"?</h2>
+
+<p>&nbsp;</p>
+
+<div id="resp1">
+
+  <p>Clique na resposta ao lado. Se esse quadro ficar:</p>
+  <p>&bull; vermelho &gt; resposta errada</p>
+  <p>&bull; verde &gt; resposta certa</p>
+
+</div>
+	
+
+<p><img src="imagens/sim.jpg" alt="sim" width="141" height="41" id="p1_sim" onmouseover="MM_changeProp('resp1','','backgroundColor','green','DIV')" /></p>
+<p><img src="imagens/nao.jpg" alt="não" width="141" height="41" id="p1_nao" onmouseover="MM_changeProp('resp1','','backgroundColor','red','DIV')" /></p>
+<p>&nbsp;</p>
+
+<h2>2. Qual o primeiro cuidado a ser tomado antes de adicionar um comportamento?</h2>
+
+<p><img src="imagens/nomear.jpg" alt="nomear os elementos" width="357" height="51" id="p2nomear"/>
+<img src="imagens/selecionar.jpg" alt="selecionar o elemento" width="357" height="51" id="p2selecionar" /></p>
+<p>&nbsp;</p>
+	
+
+<div id="resp2s">
+  <p onclick="MM_showHideLayers('resp2s','','hide','resp2n','','hide')"><strong>Sim.</strong><br />
+  Nomear todos os elementos da página é a primeira verificação a ser feita.</p>
+</div>
+<div id="resp2n">
+  <p><strong>Não.</strong><br />
+    Selecionar o elemento é a segunda coisa mais importante antes de adicionar comportamentos.</p>
+</div>
+	
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+	
+<h2>3. Os comportamentos no Dreamweaver utilizam que linguagem? Se a imagem aumentar, você acertou!</h2>
+<p>
+	<img src="imagens/java.jpg" alt="java" width="202" height="51" id="espalhar" onclick="MM_DW_effectShake($(this),'effect','shake','left',10,2,1000)" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="imagens/javascript.jpg" alt="javascript" width="202" height="51" id="aumentar" onmouseover="MM_DW_effectFade($(this),'toggle','fade',1000)" onmouseout="MM_DW_effectFade($(this),'show','fade',1000)" /></p>
+<p>&nbsp;</p>	
+	
+<h2>4. Como essa linguagem é adicionada ao conteúdo das páginas?</h2>
+	
+<p onmouseover="MM_setTextOfLayer('resp4','','A chamada para o script exterterno fica na area do cabeçalho é ep feita atraves do atributo src\n')">
+	<img src="imagens/atributo.jpg" alt="atributo" width="236" height="51" id="atributo" onclick="MM_setTextOfLayer('resp4','','Os atributos de comportamento são adicionados aos elementos, com Onclick ou com OnMouseOut')"/> 
+	<img src="imagens/script_interno.jpg" alt="script interno" width="236" height="51" id="sInterno" onclick="MM_setTextOfLayer('resp4','',' O script interno fica na area do cabeçalho')" /> 
+	<img src="imagens/script_externo.jpg" alt="script externo" width="236" height="51" id="sExterno" onclick="MM_setTextOfLayer('resp4','','Script externo')" /></p>
+
+<div id="resp4">
+
+	confira...
+
+</div>
+
+	
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+	
+<h2>5. Um comportamento é composto por quantos itens? A resposta aparecerá no momento certo...</h2>
+<p>
+  <img src="imagens/1.jpg" alt="1" width="86" height="81" id="um" onclick="MM_showHideLayers('resp5','','show')" /> 
+	<img src="imagens/2.jpg" alt="2" width="86" height="81" id="dois" onclick="MM_showHideLayers('resp5','','show')" /> 
+  <img src="imagens/3.jpg" alt="3" width="86" height="81" id="tres" onclick="MM_showHideLayers('resp5','','hide')" />
+</p>
+	
+<div id="resp5">
+  <p>Um comportamento é composto por 3 itens:</p>
+  <ol>
+    <li>Elemento que recebe o comportamento.</li>
+    <li>Ação esperada do usuário que dispara o comportamento (handler do evento).</li>
+    <li> O comportamento propriamente dito.</li>
+  </ol>
+</div>
+
+	
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	
+</body>
+</html>

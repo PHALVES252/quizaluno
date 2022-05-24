@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	color: #000;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+p, h2 {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+h2 {
+	font-size: 20px;
+	padding-top: 20px;
+}
+hr {
+	clear: right;
+	color: #395D81;
+	background-color: #395D81;
+	height: 1px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	margin-top: 20px;
+}
+.pos-img {
+     float: right;
+}
+
+
+p img {
+    cursor: pointer;
+}
+
+#resp1 {
+	position: absolute;
+	left: 237px;
+	top: 321px;
+	width: 406px;
+	height: 149px;
+	z-index: 1;
+	padding: 5px;
+	line-height: 25px;
+	visibility: visible;
+}
+#resp2s {
+	position: absolute;
+	left: 7px;
+	top: 650px;
+	width: 331px;
+	height: 122px;
+	z-index: 2;
+	visibility: visible;
+}
+#resp2n {
+	position: absolute;
+	left: 368px;
+	top: 650px;
+	width: 336px;
+	height: 123px;
+	z-index: 3;
+	visibility: visible;
+}
+#resp4 {
+	position: absolute;
+	left: 24px;
+	top: 1100px;
+	width: 685px;
+	height: 56px;
+	z-index: 4;
+	background-color: #FF8583;
+	padding: 5px;
+	visibility: visible;
+}
+
+#resp5 {
+	position: absolute;
+	left: 24px;
+	top: 1400px;
+	width: 685px;
+	height: 157px;
+	z-index: 5;
+	line-height: 25px;
+	background-color: #FFCF90;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	visibility: visible;
+}
+a.linque, a.linque:visited {
+	font-weight: bold;
+	color: #900;
+	text-decoration: none;
+}
+a.linque:hover {
+	color:#F90;
+	text-decoration:underline;
+}
+form {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #395D81;
+	font-weight: bolder;
+	margin-left: 70px;
+}
+
+fieldset {
+	border: 2px solid #395D81;
+	padding: 7px;
+	width: 650px;
+	clear: left;
+	float: left;
+	margin-bottom: 30px;
+}
+
+legend {
+	color: #FFFFFF;
+	padding: 5px;
+	background: #9EB6E2;
+}
+form p {
+	line-height: 50px;
+	margin: 0px;
+	padding: 1px;
+}
+
+label [for=nome], label [for=email], label [for=celular] {
+	width: 60px;
+	display: block;
+	float: left;
+}
+
